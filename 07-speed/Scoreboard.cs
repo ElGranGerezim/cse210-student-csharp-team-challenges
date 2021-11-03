@@ -2,11 +2,11 @@ using System;
 
 namespace _07_speed
 {
-    class ScoreBoard : Actor
+    class Scoreboard : Actor
     {
         private int _points = 0;
 
-        public ScoreBoard()
+        public Scoreboard()
         {
             _position = new Point(1, 0);
             _width = 0;
@@ -24,6 +24,12 @@ namespace _07_speed
         {
             _points += points;
             UpdateText();
+        }
+
+        /// <summary> Gets the point value currently stored in _points
+        /// <returns> Int: _points
+        public int GetPoints(){
+            return _points;
         }
 
         /// <summary>
