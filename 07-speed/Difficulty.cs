@@ -20,7 +20,14 @@ namespace _07_speed
         ///<return>none<return>
         public void updateDifficulty(int kills)
         {
-            // Hardest phase, Phase 4
+            // Phase 5, BOSS PHASE
+            if (kills >= (_gapBetweenPhases * 5))
+            {
+                _maxEnemies = 100;
+                _speed = 1;
+            }
+            
+            // Phase 4
             if (kills >= (_gapBetweenPhases * 4))
             {
                 _maxEnemies = 10;
