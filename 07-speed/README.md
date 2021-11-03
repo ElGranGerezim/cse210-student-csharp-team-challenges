@@ -1,4 +1,5 @@
 Speed: The Game
 
 Contributers:
-David Mumford
+David Mumford  
+Nazanal Laughlin  
