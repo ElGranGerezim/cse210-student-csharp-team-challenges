@@ -7,10 +7,10 @@ namespace _07_speed
     /// and how many words there should be.</summary>
     class Difficulty
     {
-        int _maxEnemies = 5;
+        private int _maxEnemies = 5;
         
 
-        int _speed = 2;
+        private int _speed = 2;
 
         const int _gapBetweenPhases = 10;
 
