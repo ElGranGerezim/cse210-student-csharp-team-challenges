@@ -5,6 +5,7 @@ using Raylib_cs;
 
 namespace _07_speed
 {
+    /// <summary> Class to contain all info about enemies
     class Enemies : Actor
     {
         private int _points;

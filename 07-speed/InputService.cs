@@ -5,6 +5,7 @@ namespace _07_speed
 {
     class InputService
     {
+        /// <summary> 
         public string getInput(){
             int keyInt = Raylib.GetKeyPressed();
             string keyString = "";
