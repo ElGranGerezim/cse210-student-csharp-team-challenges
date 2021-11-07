@@ -46,12 +46,13 @@ namespace _07_speed
 
             Console.WriteLine("Game over!");
         }
-
+        // Prepares the window for the game to start
         private void PrepareGame()
         {
             _outputService.OpenWindow(Constants.MAX_Y, Constants.MAX_X, "Speed Game", Constants.FRAME_RATE);
         }
 
+        // Gets input from the user and adds the input to the buffer line
         private void GetInputs()
         {
             string letter = _inputService.getInput();
@@ -61,7 +62,7 @@ namespace _07_speed
                 _buffer.updateBuffer(letter);
             }
         }
-
+        // Udpates the game by moving the enemies across the screen, determinig if the buffer has found a match, handling if a word has hit the edge of the screen, etc.
         private void DoUpdates()
         {
             moveEnemies();
@@ -71,7 +72,7 @@ namespace _07_speed
             spawnEnemies();
 
         }
-
+        // Outpust the individula actors in the game
         private void DoOutputs()
         {
             _outputService.StartDrawing();
@@ -88,7 +89,7 @@ namespace _07_speed
             _outputService.EndDrawing();
             
         }
-
+        // returns where the words will spawn
         private int getLane()
         {
             Random rand = new Random();
@@ -99,7 +100,7 @@ namespace _07_speed
 
             return spawnPosition;
         }
-
+        // compares the user's input to the words on screen
         private void handleBufferVsEnemy()
         {
             List<Enemies> wordsToRemove = new List<Enemies>();
@@ -119,6 +120,7 @@ namespace _07_speed
                 _enemiesList.Remove(word);
             }
         }
+        // Determines if the word has reached the edge of the screen and updates the points
         private void handleEscapedEnemies()
         {
             List<Enemies> wordsToRemove = new List<Enemies>();
@@ -136,6 +138,7 @@ namespace _07_speed
                 _enemiesList.Remove(word);
             }
         }
+        // spawns the words on screen
         private void spawnEnemies()
         {
             while (_enemiesList.Count< _difficultyManager.getMaxEnemies())
@@ -143,7 +146,7 @@ namespace _07_speed
                 Enemies enenmyspawn = new Enemies(_difficultyManager.getSpeed(), getLane());
             }
         }
-
+        // moves the words across the screen
         private void moveEnemies()
         {
             foreach (Enemies word in _enemiesList)
@@ -151,7 +154,7 @@ namespace _07_speed
                 word.MoveNext();
             }
         }
-
+        //  If the users runs out of lives, the game is over
         private bool gameOver()
         {
             if (_lifeBoard.GetPoints() <= 0)
