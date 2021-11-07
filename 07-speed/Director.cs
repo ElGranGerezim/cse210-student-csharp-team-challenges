@@ -135,7 +135,7 @@ namespace _07_speed
             }
             foreach (Enemies word in wordsToRemove)
             {
-                // _lifeBoard.AddPoints(-word.getPoint());
+                _lifeBoard.AddPoints(-word.getPoint());
                 _enemiesList.Remove(word);
             }
         }
