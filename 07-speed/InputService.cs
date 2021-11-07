@@ -17,5 +17,14 @@ namespace _07_speed
             }
             return keyString;
         }
+
+        /// <summary>
+        /// Returns true if the user has attempted to close the window.
+        /// </summary>
+        /// <returns></returns>
+        public bool IsWindowClosing()
+        {
+            return Raylib.WindowShouldClose();
+        }
     }
 }

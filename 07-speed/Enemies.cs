@@ -19,6 +19,7 @@ namespace _07_speed
             SetVelocity(new Point(speed, 0));
             SelectWord();
             _points = _text.Length;
+            _width = _points * Constants.DEFAULT_FONT_SIZE;
         }
 
         /// <summary> Selects a word at random from a txt file and changes the _text member variable.

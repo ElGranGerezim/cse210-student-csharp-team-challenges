@@ -6,9 +6,16 @@ namespace _07_speed
     {
         private int _points = 0;
 
-        public Scoreboard()
+        private bool isLifeBoard = false;
+
+        public Scoreboard(bool life)
         {
-            _position = new Point(1, 0);
+            isLifeBoard = life;
+            _position = new Point(1, 0); 
+            if (isLifeBoard){
+                _position = new Point(1, 50);
+                _points = 100;
+            }
             _width = 0;
             _height = 0;
             
@@ -38,7 +45,11 @@ namespace _07_speed
         /// </summary>
         private void UpdateText()
         {
-            _text = $"Score: {_points}";
+            if (isLifeBoard){
+                _text = $"Lives: {_points}";
+            } else {
+                _text = $"Score: {_points}";
+            }
         }
     }
 }

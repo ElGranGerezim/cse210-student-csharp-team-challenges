@@ -28,7 +28,7 @@ namespace _07_speed
             }
             
             // Phase 4
-            if (kills >= (_gapBetweenPhases * 4))
+            else if (kills >= (_gapBetweenPhases * 4))
             {
                 _maxEnemies = 10;
                 _speed = 4;
