@@ -5,6 +5,7 @@ using Raylib_cs;
 
 namespace _07_speed
 {
+    /// <summary> Class to contain all info about enemies
     class Enemies : Actor
     {
         private int _points;
@@ -18,6 +19,7 @@ namespace _07_speed
             SetVelocity(new Point(speed, 0));
             SelectWord();
             _points = _text.Length;
+            _width = _points * Constants.DEFAULT_FONT_SIZE;
         }
 
         /// <summary> Selects a word at random from a txt file and changes the _text member variable.

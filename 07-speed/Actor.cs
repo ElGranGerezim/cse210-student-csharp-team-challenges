@@ -10,8 +10,8 @@ namespace _07_speed
         protected Point _position;
         protected Point _velocity;
 
-        protected int _width = Constants.DEFAULT_SQUARE_SIZE;
-        protected int _height = Constants.DEFAULT_SQUARE_SIZE;
+        protected int _width = Constants.DEFAULT_WIDTH;
+        protected int _height = Constants.DEFAULT_HEIGHT;
 
         protected string _text = "";
 

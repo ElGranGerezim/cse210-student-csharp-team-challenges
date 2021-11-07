@@ -6,7 +6,8 @@ namespace _07_speed
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Director _director = new Director();
+            _director.StartGame();
         }
     }
 }

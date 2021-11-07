@@ -5,6 +5,7 @@ namespace _07_speed
 {
     class InputService
     {
+        /// <summary> 
         public string getInput(){
             int keyInt = Raylib.GetKeyPressed();
             string keyString = "";
@@ -15,6 +16,15 @@ namespace _07_speed
                 keyInt = Raylib.GetKeyPressed();
             }
             return keyString;
+        }
+
+        /// <summary>
+        /// Returns true if the user has attempted to close the window.
+        /// </summary>
+        /// <returns></returns>
+        public bool IsWindowClosing()
+        {
+            return Raylib.WindowShouldClose();
         }
     }
 }

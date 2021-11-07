@@ -4,12 +4,13 @@ namespace _07_speed
 {
     public static class Constants
     {
-        public const int MAX_X = 600;
-        public const int MAX_Y = 400;
+        public const int MAX_X = 1600;
+        public const int MAX_Y = 900;
         public const int FRAME_RATE = 90;
 
-        public const int DEFAULT_SQUARE_SIZE = 20;
-        public const int DEFAULT_FONT_SIZE = 18;
+        public const int DEFAULT_WIDTH = 200;
+        public const int DEFAULT_HEIGHT = 50;
+        public const int DEFAULT_FONT_SIZE = 30;
         public const int DEFAULT_TEXT_OFFSET = 4;
 
         public const int SNAKE_LENGTH = 50;
