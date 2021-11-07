@@ -143,7 +143,7 @@ namespace _07_speed
             }
             foreach (Enemies word in wordsToRemove)
             {
-                // _lifeBoard.AddPoints(-word.getPoint());
+                _lifeBoard.AddPoints(-word.getPoint());
                 _enemiesList.Remove(word);
             }
         }
@@ -166,7 +166,7 @@ namespace _07_speed
                 word.MoveNext();
             }
         }
-        
+
         //  If the users runs out of lives, the game is over
         private bool gameOver()
         {
